@@ -1,2 +1,3 @@
 # Task-Manager
-A small project that covers all essential Docker concepts with PostgreSQL
+A simple project that helps you manage your tasks with ease.
+
