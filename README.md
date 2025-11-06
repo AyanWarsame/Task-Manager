@@ -1,3 +1,1 @@
-# Task-Manager
 A simple project that helps you manage your tasks with ease.
-
