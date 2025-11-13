@@ -1,0 +1,23 @@
+services:
+  app:
+    build: ./task-manager
+    image: taskmanager
+    ports:
+      - "5001:5001"
+    env_file: .env  
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: taskdb
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
