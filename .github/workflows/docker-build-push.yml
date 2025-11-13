@@ -8,7 +8,7 @@ on:
 
 env:
   IMAGE_NAME: taskmanager
-  DOCKERFILE_PATH: ./backend/Dockerfile
+  DOCKERFILE_PATH: ./task-manager/Dockerfile
 
 jobs:
   build-and-push:
@@ -43,7 +43,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./backend
+        context: ./task-manager
         file: ${{ env.DOCKERFILE_PATH }}
         push: true
         tags: ${{ steps.meta.outputs.tags }}
