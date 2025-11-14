@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: taskmanager-ap
+        app: taskmanager-app
     spec:
       containers:
       - name: taskmanager-app
